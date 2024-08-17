@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import pickle
 
 def load_data():
-    df = pd.read_csv("/home/ahmed/Desktop/Technocolabs_Internship/Week8(ML Pipline deployment)/new_preprocessed.csv")
+    df = pd.read_csv("new_preprocessed.csv")
     for col in ['status', 'country_code', 'category_code']:
         if df[col].dtype == 'object':
             label_encoder = LabelEncoder()
