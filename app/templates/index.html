@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Predictor</title>
+</head>
+<body>
+    <h1>Startup Status Predictor</h1>
+    <form method="POST">
+        <label for="Founded_at">Founded At:</label>
+        <input type="text" id="Founded_at" name="Founded_at" required><br><br>
+
+        <label for="Created_at">Created At:</label>
+        <input type="text" id="Created_at" name="Created_at" required><br><br>
+
+        <label for="Updated_at">Updated At:</label>
+        <input type="text" id="Updated_at" name="Updated_at" required><br><br>
+
+        <label for="Closed_at">Closed At:</label>
+        <input type="text" id="Closed_at" name="Closed_at" required><br><br>
+
+        <label for="Company_age">Company Age:</label>
+        <input type="text" id="Company_age" name="Company_age" required><br><br>
+
+        <label for="Investment_rounds">Investment Rounds:</label>
+        <input type="text" id="Investment_rounds" name="Investment_rounds" required><br><br>
+
+        <label for="Funding_rounds">Funding Rounds:</label>
+        <input type="text" id="Funding_rounds" name="Funding_rounds" required><br><br>
+
+        <label for="Funding_total_usd">Funding Total (USD):</label>
+        <input type="text" id="Funding_total_usd" name="Funding_total_usd" required><br><br>
+
+        <label for="milestones">Milestones:</label>
+        <input type="text" id="milestones" name="milestones" required><br><br>
+
+        <label for="relationships">Relationships:</label>
+        <input type="text" id="relationships" name="relationships" required><br><br>
+
+        <label for="Return_on_investment">Return on Investment:</label>
+        <input type="text" id="Return_on_investment" name="Return_on_investment" required><br><br>
+
+        <label for="Category_code">Category Code:</label>
+        <select id="Category_code" name="Category_code" required>
+            <option value="Consulting">Consulting</option>
+            <option value="Advertising">Advertising</option>
+            <option value="Biotech">Biotech</option>
+            <option value="Ecommerce">Ecommerce</option>
+            <option value="Games_Video">Games Video</option>
+            <option value="Enterprise">Enterprise</option>
+            <option value="Software">Software</option>
+            <option value="Web">Web</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="Country_code">Country Code:</label>
+        <select id="Country_code" name="Country_code" required>
+            <option value="AUS">AUS</option>
+            <option value="CAN">CAN</option>
+            <option value="ESP">ESP</option>
+            <option value="DEU">DEU</option>
+            <option value="FRA">FRA</option>
+            <option value="GBR">GBR</option>
+            <option value="IND">IND</option>
+            <option value="ISR">ISR</option>
+            <option value="NLD">NLD</option>
+            <option value="USA">USA</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <button type="submit">Predict Status</button>
+    </form>
+
+    {% if result %}
+        <h2>Prediction Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
