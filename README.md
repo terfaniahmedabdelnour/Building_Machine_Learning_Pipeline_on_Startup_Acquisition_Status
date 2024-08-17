@@ -1,0 +1,2 @@
+# Building_Machine_Learning_Pipeline_on_Startup_Acquisition_Status
+TechnoColabs project internship
